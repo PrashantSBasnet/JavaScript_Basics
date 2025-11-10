@@ -161,8 +161,8 @@ myPromise
 
 
 
-//another example of promise
 
+//--------------another example of promise---------------------------------
 let p = new Promise((resolve,reject) => {
     let a = 1+1
     if (a ==2){
@@ -249,33 +249,6 @@ async function getData() {
 getData();
 
 
-//Callbacks vs Promises Example
-//using Promise --> makes code much cleaner
-
-function watchTutorialPromise(){
-    return new Promise((resolve,reject)=>{
-        if (userLeft){
-            reject({
-                name:'User Left without watching tutorial',
-                message: 'oops!'
-            })
-        }   else if (userWatchingCatMeme){
-            reject({
-                name:'User distracted',
-                message:'Youtube music is better than tutorial'
-            })
-        }   else {
-            resolve('Thumbs up keep learning')
-        }
-    })
-}
-
-//using promise it is much cleaner
-watchTutorialPromise().then((message)=>{
-    console.log('Success: ' + message)
-},(error)=>{
-    console.log(error.name+ ' ' + error.message)
-})
 
 
 //using Promise.all
@@ -369,4 +342,5 @@ Summary:
 | Async/Await | Modern syntax for Promises  | `getData()`, `organizeBirthdayParty()`        |
 | Promise.all | Parallel execution          | Multiple video uploads                        |
 **/
+
 
