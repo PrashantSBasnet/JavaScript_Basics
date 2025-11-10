@@ -141,23 +141,6 @@ let myPromise = new Promise((resolve, reject) => {
   }
 });
 
-
-let p = new Promise((resolve,reject) => {
-    let a = 1+1
-    if (a ==2){
-        resolve('Success')
-    }
-    else(
-        reject('Failed')
-    )
-})
-
-p.then((message)=>{  //then is called if promise is resolve
-    console.log('this is the then '+ message)
-}).catch((message)=>{ //catch is called if promise is reject
-    console.log('This is in the catch ' +message)
-})
-
 /**
 You “consume” a Promise using .then(), .catch(), and .finally().
 .then() runs when the promise is fulfilled.
@@ -175,6 +158,28 @@ myPromise
   .finally(() => {
     console.log("Promise finished.");
   });
+
+
+
+//another example of promise
+
+let p = new Promise((resolve,reject) => {
+    let a = 1+1
+    if (a ==2){
+        resolve('Success')
+    }
+    else(
+        reject('Failed')
+    )
+})
+
+p.then((message)=>{  //then is called if promise is resolve
+    console.log('this is the then '+ message)
+}).catch((message)=>{ //catch is called if promise is reject
+    console.log('This is in the catch ' +message)
+})
+
+
 
 /**
 Example with Asynchronous Operation with setTimeout
@@ -364,3 +369,4 @@ Summary:
 | Async/Await | Modern syntax for Promises  | `getData()`, `organizeBirthdayParty()`        |
 | Promise.all | Parallel execution          | Multiple video uploads                        |
 **/
+
